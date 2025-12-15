@@ -1,0 +1,36 @@
+seed: 42
+
+paths:
+  base_dir: data/cafa-6-protein-function-prediction
+  train_terms: ${paths.base_dir}/Train/train_terms.tsv
+  train_fasta: ${paths.base_dir}/Train/train_sequences.fasta
+  test_fasta: ${paths.base_dir}/Test/testsuperset.fasta
+  obo: ${paths.base_dir}/Train/go-basic.obo
+  goa_csv: ${paths.base_dir}/goa_uniprot_all.csv
+  esm_dir: ${paths.base_dir}/esm-650m-embeds
+  esm_embeddings: ${paths.esm_dir}/protein_embeddings.npy
+  esm_ids: ${paths.esm_dir}/protein_ids.csv
+
+train:
+  aspects: ["C","F","P"]
+  batch_size: 128
+  epochs: 30
+  lr: 0.001
+  weight_decay: 0.0001
+  train_val_split: 0.9
+  num_workers: 4
+
+model:
+  input_dim: 1280
+  hidden1: 1024
+  hidden2: 1024
+  dropout: 0.3
+
+predict:
+  thresholds: {C: 0.02, F: 0.05, P: 0.015}
+  min_preds_per_protein: 25
+
+goa:
+  enable: true
+  add_score: 1.0
+  negative_contains: "NOT"
