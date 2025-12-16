@@ -6,7 +6,7 @@
 ## Pipeline (high level)
 
 ```text
-Download data/embeddings
+  ├─ Download data/embeddings
   ├─ Build label space & targets per aspect (C/F/P)
   ├─ Train 3-head MLP (thực tế là 3 model: C, F, P)
   ├─ Predict test scores (C/F/P) → merge
