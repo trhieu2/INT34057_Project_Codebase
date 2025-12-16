@@ -13,3 +13,11 @@
   ├─ Ontology propagation (child → parent, max score)
   ├─ (Optional) GOA negative removal + add GOA positives
   └─ Export submission.tsv
+## TL;DR / Quickstart (3–5 phút)
+
+### 1) Create environment + install
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -e .
