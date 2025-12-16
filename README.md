@@ -1,4 +1,4 @@
-<img width="241" height="110" alt="image" src="https://github.com/user-attachments/assets/10b061c9-9fb6-478c-891e-5b54678d56ab" />## INT34057 Project — CAFA-6 Protein Function Prediction
+## INT34057 Project — CAFA-6 Protein Function Prediction
 
 Repo này là codebase cho cuộc thi Kaggle **CAFA-6 Protein Function Prediction**: dự đoán **GO terms** cho **protein** dựa trên **chuỗi acid amin**
 
